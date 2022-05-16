@@ -1,0 +1,97 @@
+{
+  "name": "rollup-plugin-scss-lit",
+  "version": "1.0.0",
+  "description": "Rollup plugin for importing Sass sources as constructable stylesheets to projects using lit (lit-html and lit-element) or fast-element.",
+  "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/prantlf/rollup-plugin-scss-lit/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "http://prantlf.github.com/rollup-plugin-scss-lit/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prantlf/rollup-plugin-scss-lit.git"
+  },
+  "bugs": {
+    "url": "http://github.com/prantlf/rollup-plugin-scss-lit/issues"
+  },
+  "type": "module",
+  "module": "lib/index.js",
+  "main": "lib/index.cjs",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">= 14"
+  },
+  "scripts": {
+    "prepare": "rollup -c",
+    "lint": "denolint",
+    "check": "node test",
+    "cover": "c8 node test",
+    "test": "denolint && c8 node test"
+  },
+  "c8": {
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "branches": 100,
+    "lines": 100,
+    "functions": 100,
+    "statements": 100
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "failComment": false
+        }
+      ],
+      "@semantic-release/git"
+    ]
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^4.2.1",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "postcss": "^8.4.13",
+    "rollup-copy-transform-css": "^1.1.0",
+    "sass": "^1.51.0"
+  },
+  "devDependencies": {
+    "@node-rs/deno-lint": "^1.13.1",
+    "builtin-modules": "^3.3.0",
+    "c8": "^7.11.2",
+    "rollup": "^2.73.0",
+    "tehanu": "^0.2.2",
+    "tehanu-repo-coco": "^0.0.2"
+  },
+  "peerDependencies": {
+    "lit": "^2",
+    "rollup": "^2"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "rollup-plugin",
+    "lit",
+    "lit-css",
+    "lit-scss",
+    "lit-html",
+    "lit-element",
+    "fast-element",
+    "css",
+    "sass",
+    "scss"
+  ]
+}
