@@ -30,13 +30,11 @@ import { litScss } from 'rollup-plugin-scss-lit'
 
 export default {
   plugins: [
-    litScss({ minify: process.env.NODE_ENV === 'production' }),
+    litScss({ minify: process.env.NODE_ENV === 'production' })
   ]
   // the rest of the configuration
 }
 ```
-
-Make sure that you use [Node.js] 14 or newer and [Rollup] 2 or newer. Use your favourite package manager - [NPM], [PNPM] or [Yarn]:
 
 ## Installation
 
