@@ -99,6 +99,8 @@ Default: `false`
 
 Enables minifying of the compiled CSS output. If an object is specified, it will be passed to the [cssnano] plugin.
 
+Experimental feature: if the object is set to `{ fast: true }`, [esbuild] will be used instead of [postcss].
+
 ### `plugins`
 
 Type: `Array<Object>`<br>
@@ -173,6 +175,8 @@ Passing a boolean to the `litScss` plugin - `{ minify: true }` - will use the de
 }
 ```
 
+Experimental feature: if the `minify` object is set to `{ fast: true }`, [esbuild] will be used instead of [postcss].
+
 ## Contributing
 
 In lieu of a formal styleguide, take care to maintain the existing coding style. Lint and test your code.
@@ -196,6 +200,7 @@ Licensed under the [MIT License].
 [PostCSS]: https://postcss.org/
 [Sass]: https://sass-lang.com/documentation/js-api
 [cssnano]: https://cssnano.co/
+[esbuild]: https://esbuild.github.io/
 [postcss-fail-on-warn]: https://www.npmjs.com/package/postcss-fail-on-warn
 [options supported by PostCSS for source maps]: https://postcss.org/api/#sourcemapoptions
 [options for cssnano]: https://cssnano.co/docs/config-file/

@@ -43,6 +43,26 @@ export { flexBody as default };
 `)
 })
 
+test('minifies with exbuild', async () => {
+  const bundle = await rollup({
+    input: 'test/flex-body.scss',
+    plugins: [litScss({
+      minify: { fast: true },
+      options: { loadPaths: ['test'] }
+    })],
+    external: 'lit'
+  })
+  const { output } = await bundle.generate({});
+  const { code } = output[0]
+  strictEqual(code, `import { css } from 'lit';
+
+var flexBody = css\`.control,body{display:flex}
+\`;
+
+export { flexBody as default };
+`)
+})
+
 test('handles broken input', async () => {
   try {
     await rollup({
