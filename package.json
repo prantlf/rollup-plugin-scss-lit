@@ -65,14 +65,14 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "postcss": "^8.4.14",
-    "rollup-copy-transform-css": "^1.2.1",
-    "sass": "^1.52.1"
+    "rollup-copy-transform-css": "^1.2.2",
+    "sass": "^1.52.2"
   },
   "devDependencies": {
     "@node-rs/deno-lint": "^1.13.1",
     "builtin-modules": "^3.3.0",
     "c8": "^7.11.3",
-    "rollup": "^2.74.1",
+    "rollup": "^2.75.5",
     "tehanu": "^1.0.0",
     "tehanu-repo-coco": "^1.0.0",
     "tehanu-teru": "^1.0.0"
