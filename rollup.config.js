@@ -1,4 +1,4 @@
-import builtins from 'builtin-modules/static'
+import builtins from 'builtin-modules/static.js'
 
 export default {
   input: 'lib/index.js',

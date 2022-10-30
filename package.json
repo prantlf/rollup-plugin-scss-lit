@@ -25,14 +25,14 @@
     "lib"
   ],
   "engines": {
-    "node": ">= 14"
+    "node": ">= 14.18"
   },
   "scripts": {
     "prepare": "rollup -c",
     "lint": "denolint",
-    "check": "teru-esm test/index.js",
+    "check": "teru test/index.cjs && teru-esm test/index.js",
     "cover": "c8 teru-esm test/index.js",
-    "test": "denolint && c8 teru-esm test/index.js"
+    "test": "denolint && teru test/index.cjs && c8 teru-esm test/index.js"
   },
   "c8": {
     "check-coverage": true,
@@ -61,25 +61,26 @@
     ]
   },
   "dependencies": {
-    "@rollup/pluginutils": "^4.2.1",
+    "@rollup/pluginutils": "^5.0.2",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "postcss": "^8.4.14",
-    "rollup-copy-transform-css": "^1.2.3",
-    "sass": "^1.54.0"
+    "postcss": "^8.4.18",
+    "rollup-copy-transform-css": "^1.2.4",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
-    "@node-rs/deno-lint": "^1.14.0",
     "builtin-modules": "^3.3.0",
     "c8": "^7.12.0",
-    "rollup": "^2.77.2",
+    "denolint": "^2.0.4",
+    "rollup": "^3.2.3",
+    "rollup-plugin-scss-lit": "link:",
     "tehanu": "^1.0.1",
     "tehanu-repo-coco": "^1.0.0",
     "tehanu-teru": "^1.0.0"
   },
   "peerDependencies": {
     "lit": "^2",
-    "rollup": "^2"
+    "rollup": "^2 || ^3"
   },
   "keywords": [
     "rollup",
