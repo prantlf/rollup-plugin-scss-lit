@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-scss-lit",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Rollup plugin for importing Sass sources as constructable stylesheets to projects using lit (lit-html and lit-element) or fast-element.",
   "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
   "license": "MIT",
