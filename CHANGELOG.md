@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/prantlf/rollup-plugin-scss-lit/compare/v1.1.4...v1.1.5) (2023-03-16)
+
+
+### Bug Fixes
+
+* Emergency upgrade of sass because of a brutal slowness ([6e2c038](https://github.com/prantlf/rollup-plugin-scss-lit/commit/6e2c038b2797ce3042218becec67394e311349db))
+
 ## [1.1.4](https://github.com/prantlf/rollup-plugin-scss-lit/compare/v1.1.3...v1.1.4) (2023-02-24)
 
 
