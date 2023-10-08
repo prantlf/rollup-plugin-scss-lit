@@ -61,18 +61,18 @@
     ]
   },
   "dependencies": {
-    "@rollup/pluginutils": "^5.0.2",
-    "postcss": "^8.4.21",
-    "rollup-copy-transform-css": "^1.2.4",
-    "sass": "^1.59.3"
+    "@rollup/pluginutils": "^5.0.5",
+    "postcss": "^8.4.31",
+    "rollup-copy-transform-css": "^1.2.5",
+    "sass": "^1.69.0"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "builtin-modules": "^3.3.0",
-    "c8": "^7.13.0",
-    "denolint": "^2.0.7",
-    "rollup": "^3.19.1",
+    "c8": "^8.0.1",
+    "denolint": "^2.0.12",
+    "rollup": "^4.0.2",
     "rollup-plugin-scss-lit": "link:",
     "tehanu": "^1.0.1",
     "tehanu-repo-coco": "^1.0.0",
