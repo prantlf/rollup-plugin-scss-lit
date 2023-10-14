@@ -67,6 +67,37 @@ export default {
 
 Then call `rollup` either via the [command-line] or [programmatically].
 
+### Using with TypeScript
+
+If you are using TypeScript, you may need to create a declaration file to allow TypeScript to import the SCSS files (otherwise you will see error messages like `Cannot find module './styles.scss' or its corresponding type declarations.`).
+
+Create a file `src/styles.d.ts` with the following content:
+
+```ts
+declare module '*.scss' {
+  import { CSSResultGroup } from 'lit';
+  const styles: CSSResultGroup;
+  export default styles;
+}
+```
+
+If you have configured typescript to use a different `outDir` than the default of `./`, you will also need to copy your SCSS files into that directory. You can use [rollup-plugin-copy] for this, by adding the following to your Rollup configuration file:
+
+```js
+import copy from "rollup-plugin-copy";
+
+export default {
+  plugins: [
+    copy({
+      targets: [{ src: "src/**/*.scss", dest: "build" }], // build is configured as outDir in tsconfig.json
+      flatten: false, // important - preserves folder structure
+      hook: "buildStart", // important - needs to run before other plugins
+    }),
+    // ...
+  ]
+}
+```
+
 ## Options
 
 The following options can be passed in an object to the plugin function to change the default values.
@@ -212,3 +243,4 @@ Licensed under the [MIT License].
 [fast-element]: https://www.fast.design/docs/fast-element/leveraging-css/
 [rollup-plugin-styles]: https://www.npmjs.com/package/rollup-plugin-styles
 [rollup-plugin-lit-css]: https://www.npmjs.com/package/rollup-plugin-lit-css
+[rollup-plugin-copy]: https://www.npmjs.com/package/rollup-plugin-copy
