@@ -1,5 +1,15 @@
 # Changes
 
+## [2.0.0](https://github.com/prantlf/rollup-plugin-scss-lit/compare/v1.1.6...v2.0.0) (2024-08-06)
+
+### Bug Fixes
+
+* Upgrade dependencies ([17e1b0f](https://github.com/prantlf/rollup-plugin-scss-lit/commit/17e1b0fea85ba16a6d3d74992ee86203f42a6f7b))
+
+### BREAKING CHANGES
+
+The minimum Node.js version is 18 from now on.
+
 ## [1.1.6](https://github.com/prantlf/rollup-plugin-scss-lit/compare/v1.1.5...v1.1.6) (2023-10-08)
 
 ### Bug Fixes
