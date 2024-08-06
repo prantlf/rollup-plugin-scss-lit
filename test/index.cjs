@@ -1,4 +1,4 @@
-const { strictEqual } = require('assert')
+const { strictEqual } = require('node:assert')
 const test = require('tehanu')(__filename)
 const { litScss } = require('rollup-plugin-scss-lit')
 

@@ -1,5 +1,5 @@
-import { ok, fail, strictEqual } from 'assert'
-import { fileURLToPath } from 'url'
+import { ok, fail, strictEqual } from 'node:assert'
+import { fileURLToPath } from 'node:url'
 import { rollup } from 'rollup'
 import tehanu from 'tehanu'
 import { litScss } from '../lib/index.js'
@@ -72,6 +72,7 @@ test('handles broken input', async () => {
     })
     fail('processed broken input')
   } catch ({ message }) {
-    ok(message.startsWith('expected "}".'))
+    console.log(message)
+    ok(message.startsWith('[plugin lit-scss] test/broken.txt: expected "}".'))
   }
 })
