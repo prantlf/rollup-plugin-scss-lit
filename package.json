@@ -61,8 +61,8 @@
     "tehanu-teru": "^1.0.1"
   },
   "peerDependencies": {
-    "lit": "^2",
-    "rollup": "^2 || ^3"
+    "lit": "^2 || ^3",
+    "rollup": "^2 || ^3 || ^4"
   },
   "keywords": [
     "rollup",
