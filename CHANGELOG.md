@@ -1,5 +1,11 @@
 # Changes
 
+## [2.1.0](https://github.com/prantlf/rollup-plugin-scss-lit/compare/v2.0.1...v2.1.0) (2024-12-10)
+
+### Features
+
+* Upgrade dependencies ([ff176e4](https://github.com/prantlf/rollup-plugin-scss-lit/commit/ff176e4031e952b07b8fb76967b07e7f66fcae07))
+
 ## [2.0.1](https://github.com/prantlf/rollup-plugin-scss-lit/compare/v2.0.0...v2.0.1) (2024-08-07)
 
 ### Bug Fixes
